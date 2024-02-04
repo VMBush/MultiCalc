@@ -1,0 +1,1563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+
+QWidget#centralwidget {
+    background-color: #3b2f2f;
+}</string>
+   </property>
+   <widget class="QStackedWidget" name="calc_stack">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>801</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QStackedWidget#calc_stack &gt; *{
+	 background-color: #3b2f2f;
+}
+
+QWidget#centralwidget {
+    background-color: #3b2f2f;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="p1_defaul_calc">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 25px;
+    background-color: #f0f0f0; /* Светлый фон */
+    color: #333; /* Цвет текста */
+    border: 2px solid #333; /* Цвет границы */
+    font-family: &quot;Arial&quot;, sans-serif; /* Красивый шрифт */
+    font-size: 14px; /* Размер шрифта */
+}
+
+QPushButton:hover {
+    background-color: #ddd; /* Цвет фона при наведении */
+    color: #555; /* Цвет текста при наведении */
+    border: 2px solid #555; /* Цвет границы при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #aaa; /* Цвет фона при нажатии */
+    color: #888; /* Цвет текста при нажатии */
+    border: 2px solid #888; /* Цвет границы при нажатии */
+}</string>
+     </property>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>771</width>
+        <height>446</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0" columnstretch="0,0,0,0,0,0,0,0,0,0">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="log_operation">
+         <property name="text">
+          <string>log(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="8">
+        <widget class="QPushButton" name="mod_operation">
+         <property name="text">
+          <string>%</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="8">
+        <widget class="QPushButton" name="num_9">
+         <property name="text">
+          <string>9</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="7">
+        <widget class="QPushButton" name="clear_operation">
+         <property name="text">
+          <string>C</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="acos_operation">
+         <property name="text">
+          <string>acos(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>80</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pow_operation">
+         <property name="text">
+          <string>^</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="tan_operation">
+         <property name="text">
+          <string>tan(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="9">
+        <widget class="QPushButton" name="calc_res_btn">
+         <property name="text">
+          <string>=</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="6">
+        <widget class="QPushButton" name="num_x">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>-1</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 20px;</string>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="9">
+        <widget class="QPushButton" name="minus_operation">
+         <property name="text">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QPushButton" name="atan_operation">
+         <property name="text">
+          <string>atan(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="7">
+        <widget class="QPushButton" name="num_5">
+         <property name="text">
+          <string>5</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="left_br_operation">
+         <property name="text">
+          <string>(</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="7">
+        <widget class="QPushButton" name="num_8">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="asin_operation">
+         <property name="text">
+          <string>asin(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="6">
+        <widget class="QPushButton" name="aclear_operation">
+         <property name="text">
+          <string>AC</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="8">
+        <widget class="QPushButton" name="num_dot">
+         <property name="text">
+          <string>,</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="9">
+        <widget class="QPushButton" name="div_operation">
+         <property name="text">
+          <string>÷</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="cos_operation">
+         <property name="text">
+          <string>cos(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="ln_operation">
+         <property name="text">
+          <string>ln(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="7">
+        <widget class="QPushButton" name="num_2">
+         <property name="text">
+          <string>2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="9">
+        <widget class="QPushButton" name="plus_operation">
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="6">
+        <widget class="QPushButton" name="num_4">
+         <property name="text">
+          <string>4</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="7">
+        <widget class="QPushButton" name="num_0">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="sin_operation">
+         <property name="text">
+          <string>sin(x)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="sqrt_operation">
+         <property name="text">
+          <string>√</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="6">
+        <widget class="QPushButton" name="num_7">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="8">
+        <widget class="QPushButton" name="num_6">
+         <property name="text">
+          <string>6</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="6">
+        <widget class="QPushButton" name="num_1">
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="righ_br_operation">
+         <property name="text">
+          <string>)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="8">
+        <widget class="QPushButton" name="num_3">
+         <property name="text">
+          <string>3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="9">
+        <widget class="QPushButton" name="mul_operation">
+         <property name="text">
+          <string>×</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLineEdit" name="expression">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>771</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>24</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #ffffff;
+border-radius: 20px;
+text-align: right;
+color: black;
+padding: 10px;
+</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="build_graph_btn">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>470</y>
+        <width>264</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">width: 260%;
+</string>
+      </property>
+      <property name="text">
+       <string>Build graph</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="p2_credit_calc">
+     <widget class="QLineEdit" name="cr_sum">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>161</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+padding-left: 10px;</string>
+      </property>
+      <property name="text">
+       <string>100000</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Credit sum</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="credit_table">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>741</width>
+        <height>361</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cr_term">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>50</y>
+        <width>151</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>81</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Term</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="cr_rate">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>160</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+padding-left: 10px;</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>20</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Interest rate (%)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>20</y>
+        <width>71</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Type</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cr_type">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>50</y>
+        <width>151</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cr_calculate">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>500</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #ff9900;  /* Серый фон */
+    color: #ffffff; /* Белый текст */
+    border-radius: 20px; /* Закругление левого верхнего угла */
+}
+
+
+QPushButton:hover {
+    background-color: #e69419; /* Цвет фона при наведении */
+    border: 2px solid #555; /* Цвет границы при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #b87614; /* Цвет фона при нажатии */
+    border: 2px solid #888; /* Цвет границы при нажатии */
+}</string>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cr_total_lbl">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>500</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #565656; /* Серый фон */
+    color: #ffffff; 
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Total payment</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cr_total">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>500</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cr_overp">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>500</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cr_overp_lbl">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>500</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #565656; /* Серый фон */
+    color: #ffffff; 
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Overpayment</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="p3_deposit_calc">
+     <widget class="QLineEdit" name="dep_sum">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+padding-left: 10px;</string>
+      </property>
+      <property name="text">
+       <string>100000</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Credit sum</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>111</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Term</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dep_term">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>40</y>
+        <width>111</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>10</y>
+        <width>121</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Interest rate (%)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="dep_rate_int">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>121</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+padding-left: 10px;</string>
+      </property>
+      <property name="text">
+       <string>10</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="dep_rate_tax">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>40</y>
+        <width>101</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+padding-left: 10px;</string>
+      </property>
+      <property name="text">
+       <string>35</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>10</y>
+        <width>101</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Tax rate (%)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dep_period">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>40</y>
+        <width>161</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>10</y>
+        <width>161</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Payment periodicity</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="dep_capit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>210</y>
+        <width>171</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+background-color: grey;
+padding: auto 10px;</string>
+      </property>
+      <property name="text">
+       <string>Capitalization of interest</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="deposit_table">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>270</y>
+        <width>741</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_deposit">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>150</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #ff9900;  /* Серый фон */
+    color: #ffffff; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+}
+
+
+QPushButton:hover {
+    background-color: #e69419; /* Цвет фона при наведении */
+    border: 2px solid #555; /* Цвет границы при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #b87614; /* Цвет фона при нажатии */
+    border: 2px solid #888; /* Цвет границы при нажатии */
+}</string>
+      </property>
+      <property name="text">
+       <string>Add deposit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>171</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Periodicity</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dep_per_dep">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>171</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dep_per_wid">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>120</y>
+        <width>171</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_withdraw">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #ff9900;  /* Серый фон */
+    color: #ffffff; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+}
+
+
+QPushButton:hover {
+    background-color: #e69419; /* Цвет фона при наведении */
+    border: 2px solid #555; /* Цвет границы при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #b87614; /* Цвет фона при нажатии */
+    border: 2px solid #888; /* Цвет границы при нажатии */
+}</string>
+      </property>
+      <property name="text">
+       <string>Add withdraw</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>90</y>
+        <width>171</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: -10px;
+background-color: grey;</string>
+      </property>
+      <property name="text">
+       <string>Periodicity</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dep_fin_amount">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>510</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cr_total_lbl_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>510</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #565656; /* Серый фон */
+    color: #ffffff; 
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Final amount</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cr_total_lbl_4">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>510</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #565656; /* Серый фон */
+    color: #ffffff; 
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Accrued interest</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dep_acc_interest">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>510</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cr_total_lbl_5">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>510</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #565656; /* Серый фон */
+    color: #ffffff; 
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Tax amount</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dep_tax_amount">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>510</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="dep_calculate">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>460</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #ff9900;  /* Серый фон */
+    color: #ffffff; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+}
+
+
+QPushButton:hover {
+    background-color: #e69419; /* Цвет фона при наведении */
+    border: 2px solid #555; /* Цвет границы при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #b87614; /* Цвет фона при нажатии */
+    border: 2px solid #888; /* Цвет границы при нажатии */
+}</string>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="dep_clear_table">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>460</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #d3d3d3;  /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+}
+
+
+QPushButton:hover {
+    background-color: #a9a9a9; /* Цвет фона при наведении */
+    border: 2px solid #555; /* Цвет границы при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #878787; /* Цвет фона при нажатии */
+    border: 2px solid #888; /* Цвет границы при нажатии */
+}</string>
+      </property>
+      <property name="text">
+       <string>Clear table</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>801</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="calc_type_handler">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_calc_default">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>100</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+    padding: 8px 16px; /* Внутренний отступ */
+	margin: 0px;
+}
+
+/* Стили для выделенного состояния кнопки (нажатой) */
+QPushButton:checked {
+    background-color: #ff9900; /* Оранжевый фон при нажатии */
+    color: #ffffff; /* Белый текст при нажатии */
+    
+}</string>
+       </property>
+       <property name="text">
+        <string>Default</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_calc_credit">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+    padding: 8px 16px; /* Внутренний отступ */
+	margin: 0px;
+}
+
+/* Стили для выделенного состояния кнопки (нажатой) */
+QPushButton:checked {
+    background-color: #ff9900; /* Оранжевый фон при нажатии */
+    color: #ffffff; /* Белый текст при нажатии */
+    
+}</string>
+       </property>
+       <property name="text">
+        <string>Credit</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_calc_deposit">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;
+    padding: 8px 16px; /* Внутренний отступ */
+	margin: 0px;
+}
+
+/* Стили для выделенного состояния кнопки (нажатой) */
+QPushButton:checked {
+    background-color: #ff9900; /* Оранжевый фон при нажатии */
+    color: #ffffff; /* Белый текст при нажатии */
+    
+}</string>
+       </property>
+       <property name="text">
+        <string>Deposit</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Diagram</class>
+ <widget class="QDialog" name="Diagram">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+ background-color: #3b2f2f;
+}</string>
+  </property>
+  <widget class="QCustomPlot" name="graphic" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>760</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: #f0f0f0; 
+border-radius: 25px;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="xmin">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>540</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Xmin</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="xmin_txt">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>540</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>-10</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ymin_txt">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>590</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>-10</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ymin">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>590</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Ymin</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="xmax_txt">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>540</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="xmax">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>540</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Xmax</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ymax_txt">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>590</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-top-left-radius: 0px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 0px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 10px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ymax">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>590</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+    background-color: #d3d3d3; /* Серый фон */
+    color: #000000; /* Белый текст */
+    border-top-left-radius: 10px; /* Закругление левого верхнего угла */
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-top-right-radius: 0px; /* Острый правый верхний угол */
+    border-bottom-right-radius: 0px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Ymax</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resize">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>540</y>
+     <width>201</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #ff9900;  /* Серый фон */
+    color: #ffffff; /* Белый текст */
+    border-radius: 20px; /* Закругление левого верхнего угла */
+}
+
+
+QPushButton:hover {
+    background-color: #e69419; /* Цвет фона при наведении */
+    border: 2px solid #555; /* Цвет границы при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #b87614; /* Цвет фона при нажатии */
+    border: 2px solid #888; /* Цвет границы при нажатии */
+}</string>
+   </property>
+   <property name="text">
+    <string>Resize</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
